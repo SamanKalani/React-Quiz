@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# 🧠 The React Quiz App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An interactive, fast, and dynamic Quiz Application built with **React** that tests user knowledge through a series of timed questions. This project was developed to master advanced React state patterns, performance optimization, and asynchronous data fetching.
 
-## Available Scripts
+## 🚀 Live Demo
 
-In the project directory, you can run:
+Easily explore the live application hosted on Vercel:
+👉 **[🔗 View Live Project](https://react-quiz-t98h.vercel.app)**
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🛠️ Tech Stack & Key Concepts Covered
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Instead of using basic `useState` for simple states, this application orchestrates a complex user flow using a more scalable architecture:
 
-### `npm test`
+- **Advanced State Management (`useReducer`):** Manages multiple, interdependent state transitions seamlessly (states like: `loading`, `error`, `ready`, `active`, `finished`).
+- **Asynchronous Data Fetching (`useEffect`):** Implements modern data fetching practices using the native `fetch` API to load quiz data dynamically on mount.
+- **Real-time Timer Component:** Implemented a robust countdown mechanism with proper React lifecycle cleanup functions to prevent memory leaks.
+- **Serverless Mock API Architecture:** Hosted the JSON database externally to decouple the frontend and ensure high availability on production servers.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 💡 Architectural Highlight: Moving Beyond Localhost
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+In development, this app initially relied on a local `json-server` (`localhost:8000`). For production and deployment readiness on Vercel, I migrated the mock backend into a live, remote API using a **GitHub Gist (Raw JSON Endpoint)**.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This demonstrates an understanding of:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Handling API endpoints in a production environment.
+2. Managing network latency and asynchronous state updates (`data.questions`).
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🧠 What I Learned & Reinforced
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- How to structure a complex state machine inside a clean reducer function.
+- The critical importance of cleaning up side-effects (like `setInterval`) inside React hooks.
+- Formatting and presenting a polished user interface with responsive layout controls.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## ⚙️ How to Run This Project Locally
 
-## Learn More
+1. **Clone the repository:**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+   git clone [https://github.com/SamanKalani/React-Quiz.git](https://github.com/SamanKalani/React-Quiz.git)
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. Navigate into the project folder:
+   cd React-Quiz
 
-### Code Splitting
+3. Install the dependencies:
+   npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+4. Run the app in development mode:
+   npm start
+5. Open http://localhost:3000 to view it in your browser.
