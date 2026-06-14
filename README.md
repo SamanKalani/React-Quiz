@@ -5,7 +5,7 @@ An interactive, fast, and dynamic Quiz Application built with **React** that tes
 ## 🚀 Live Demo
 
 Easily explore the live application hosted on Vercel:
-👉 **[🔗 View Live Project](https://react-quiz-t98h.vercel.app)**
+👉 **[🔗 View Live Project](https://react-quiz-chi-sandy.vercel.app/)**
 
 ---
 
