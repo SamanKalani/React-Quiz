@@ -87,9 +87,11 @@ export default function App() {
   useEffect(function () {
     async function fetchQuestions() {
       try {
-        const res = await fetch('http://localhost:9000/questions')
+        const res = await fetch(
+          'https://gist.githubusercontent.com/SamanKalani/c19401115d11ea20d8f707d66ea477eb/raw/f475c8fbf2c32273302764a9a53d208cecd61743/gistfile1.txt'
+        )
         const data = await res.json()
-        dispatch({ type: 'dataReceived', payload: data })
+        dispatch({ type: 'dataReceived', payload: data.questions })
       } catch (err) {
         dispatch({ type: 'dataFailed' })
       }
