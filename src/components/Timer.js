@@ -5,6 +5,7 @@ export default function Timer({ dispatch, secondsRemaining }) {
   const seconds = secondsRemaining % 60
   useEffect(
     function () {
+      //what is setInterval? setInterval is a function that takes a callback function and a delay in milliseconds, and calls the callback function every delay milliseconds until clearInterval is called with the id returned by setInterval
       const id = setInterval(function () {
         dispatch({ type: 'tick' })
       }, 1000)
